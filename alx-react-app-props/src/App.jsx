@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import ProfilePage from './ProfilePage';
+import UserProfile from './UserProfile';
 import UserContext from './components/UserContext';
 
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
      <UserContext.Provider value={userData} >
-     <ProfilePage  />;
+     <UserProfile  />;
      </UserContext.Provider>
     </>
   )

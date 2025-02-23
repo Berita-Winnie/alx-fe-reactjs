@@ -1,6 +1,6 @@
 import UserDetails from './UserDetails';
 import UserInfo from './UserInfo';
-function ProfilePage () {
+function UserProfile() {
     return (
 <UserDetails />
 
@@ -8,4 +8,4 @@ function ProfilePage () {
 }
     
 
-export default ProfilePage;
+export default UserProfile;
