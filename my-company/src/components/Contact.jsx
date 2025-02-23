@@ -1,21 +1,52 @@
-import React from "react";
-function Contact() {
-    return (
-      <div style={{
-        backgroundColor: "#ffe4e1", 
-        minHeight: "100vh", 
-        display: "flex", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        flexDirection: "column"
-      }}>
-        <h1 style={{ color: "#ff4500" }}>Contact Us</h1>
-        <p style={{ fontSize: "18px", color: "#333", textAlign: "center" }}>
-          Reach out to us via email at contact@mycompany.com.
-        </p>
-      </div>
-    );
-  }
+import { useState } from 'react';
 
+   function Contact() {
+     const [formData, setFormData] = useState({
+       name: '',
+       email: '',
+       message: ''
+     });
 
-export default Contact;
+     const handleChange = (e) => {
+       setFormData({ ...formData, [e.target.name]: e.target.value });
+     };
+
+     const handleSubmit = (e) => {
+       e.preventDefault();
+       alert('Form submitted!');
+     };
+
+     return (
+       <div style={{ padding: '20px' }}>
+         <h1>Contact Us</h1>
+         <form onSubmit={handleSubmit}>
+           <input
+             type="text"
+             name="name"
+             placeholder="Your Name"
+             value={formData.name}
+             onChange={handleChange}
+             style={{ display: 'block', margin: '10px 0' }}
+           />
+           <input
+             type="email"
+             name="email"
+             placeholder="Your Email"
+             value={formData.email}
+             onChange={handleChange}
+             style={{ display: 'block', margin: '10px 0' }}
+           />
+           <textarea
+             name="message"
+             placeholder="Your Message"
+             value={formData.message}
+             onChange={handleChange}
+             style={{ display: 'block', margin: '10px 0' }}
+           />
+           <button type="submit">Send Message</button>
+         </form>
+       </div>
+     );
+   }
+
+   export default Contact;
