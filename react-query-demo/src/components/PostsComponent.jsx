@@ -12,6 +12,10 @@ const reactQuery = () => {
         queryKey: ["fetchPosts"],
         queryFn:fetchPosts,
         staleTime: 5000, //adjusted to experiment with caching.
+        cacheTime: 60000, //Keeps the data in the cache for one minute
+        refetchOnWindowFocus: true, //refetche data when the window regains focus
+        keepPreviousData: true, //Retain previous data when fetching new data
+    
     });
 
     //handle loading state
