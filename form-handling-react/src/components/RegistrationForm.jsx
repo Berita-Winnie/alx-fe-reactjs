@@ -2,7 +2,7 @@ import React from 'react'
 import {useState} from 'react'
 
 const RegistrationForm = () => {
-      const [formData, setFormData] =useState({name:'', email:'', password:''});
+      const [formData, setFormData] =useState({username:'', email:'', password:''});
       const handleChange =(e) => {
           const { name,value} = e.target;
           setFormData(prevValues => ({...prevValues, [name]: value}));
@@ -17,7 +17,7 @@ const RegistrationForm = () => {
         <input
         type="text"
         name="username"
-        value={formData.name}
+        value={username}
         onChange={handleChange}
         required
         />
@@ -25,7 +25,7 @@ const RegistrationForm = () => {
         <input
         type="email"
         name="email"
-        value={formData.email}
+        value={email}
         onChange={handleChange}
         required
         />
@@ -33,7 +33,7 @@ const RegistrationForm = () => {
         <input
         type="password"
         name="password"
-        value={formData.password}
+        value={password}
         onChhange={handleChange}
         required
         />
