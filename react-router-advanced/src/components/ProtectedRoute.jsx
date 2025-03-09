@@ -4,7 +4,7 @@ import useAuth from "./useAuth";
 const ProtectedRoute = ({ element }) => {
   const { isAuthenticated } = useAuth();
 
-  return isAuthenticated ? element : <Navigate to="/Profile" />;
+  return isAuthenticated ? element : <Navigate to="/profile" />;
 };
 
 export default ProtectedRoute;
