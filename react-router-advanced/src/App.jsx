@@ -5,7 +5,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ProtectedRoute><profile /></ProtectedRoute> }/>
+        <Route path="/profile" element={<ProtectedRoute><profile/></ProtectedRoute> }/>
         <Route path="/Blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
 
