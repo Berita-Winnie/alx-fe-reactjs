@@ -15,12 +15,12 @@ const RegistrationForm = () => {
         let valid = true;
         let newErrors = { username: '', email: '', password: '' };
     
-        if (!username.trim()) {
+        if (!username) {
           newErrors.username = 'Username is required';
           valid = false;
         }
     
-        if (!email.trim()) {
+        if (!email) {
           newErrors.email = 'Email is required';
           valid = false;
         } else if (!/\S+@\S+\.\S+/.test(email)) {
@@ -28,7 +28,7 @@ const RegistrationForm = () => {
           valid = false;
         }
     
-        if (!password.trim()) {
+        if (!password) {
           newErrors.password = 'Password is required';
           valid = false;
         } else if (password.length < 6) {
