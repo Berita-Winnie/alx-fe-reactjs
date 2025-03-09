@@ -5,7 +5,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Profile />} />
         <Route path="/Blog" element={<Blog />} />
-        <Route path="/blog/:Id" element={<BlogPost />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
 
       </Routes>
     </BrowserRouter>
