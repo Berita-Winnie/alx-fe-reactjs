@@ -1,7 +1,7 @@
 import HomePage from "./components/HomePage";
 import React from 'react'
 import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Routes, Route } from "react-router";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import RecipeDetail from "./components/RecipeDetail";
 
 
@@ -12,7 +12,7 @@ const App = () => {
       <Route path="/" element={<HomePage/>} />
       <Route path="/recipe/:id" element={<RecipeDetail />} />
       </Routes>
- 
+  
   );
 }
 
