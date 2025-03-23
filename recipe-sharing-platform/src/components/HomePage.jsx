@@ -14,7 +14,7 @@ const HomePage = () => {
   return (
     <div className="font-poppins min-h-screen bg-slate-400 " >
     <h1 className = "text-gray-900 text-2xl font-bold text-center py-8 px-4" >Todays Recommended Recipes</h1>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 justify-items-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 p-4 justify-items-center">
     {Recipes 
      .slice(0,2)
      .map((recipe) => (
