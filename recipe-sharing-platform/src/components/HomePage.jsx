@@ -18,13 +18,13 @@ const HomePage = () => {
     {Recipes 
      .slice(0,2)
      .map((recipe) => (
-      <link to={`/recipe/${recipe.id}`} key={recipe.id} className="block">
+      <Link to={`/recipe/${recipe.id}`} key={recipe.id} className="block">
         <div key = {recipe.id} className="max-w-sm  bg-slate-100 hover:bg-neutral-200 rounded-lg drop-shadow-2xl  ">
             <h2 className="py-4 pr-4 text-center "> {recipe.title}</h2>
             <img src={recipe.image} alt={recipe.title} className="p-3  rounded-lg w-40 h-40 mx-auto"/>
             <p className="p-5 italic  text-sm">{recipe.summary}</p>
         </div>
-        </link>
+        </Link>
      ))
      }</div>
     </div>
