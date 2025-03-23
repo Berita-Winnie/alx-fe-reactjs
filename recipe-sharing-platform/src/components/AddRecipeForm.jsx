@@ -3,7 +3,7 @@ import { useState }from 'react';
 
 const AddRecipeForm = () => {
     const [formData, setFormData] =useState({
-        RecipeTitle:"",
+        Title:"",
         Ingredients:"",
         PreparationSteps:""
     });
@@ -21,8 +21,8 @@ const AddRecipeForm = () => {
 const validateForm = () => {
  let newErrors = {};
 
- if(!formData.RecipeTitle.trim()){
-    newErrors.RecipeTitle = "Recipe Title is required";
+ if(!formData.Title.trim()){
+    newErrors.Title = "Recipe Title is required";
  }
  if (IngredientWords.length < 2 ){
     newErrors.Ingredients = "Ingredie must contain at least two words";
@@ -42,7 +42,7 @@ const validateForm = () => {
         if (validateForm()){
             console.log("Form Submitted:", formData);
             alert("Recipe added successfully!");
-            setFormData({ RecipeTitle: "", Ingredients: "", PreparationSteps: "" }); // Reset form
+            setFormData({ Title: "", Ingredients: "", PreparationSteps: "" }); // Reset form
             setErrors({});
 
         }
@@ -61,10 +61,10 @@ const validateForm = () => {
             className="border border-gray-300 rounded-lg p-3 w-[350px] shadow-md focus:outline-none focus:ring-2 focus:ring-blue-200"
             type="text"
             name="RecipeTitle"
-            value={formData.RecipeTitle}
+            value={formData.Title}
             onChange={handleChange}
             />
-             {errors.RecipeTitle && <p className="text-red-500 text-sm">{errors.RecipeTitle}</p>}
+             {errors.Title && <p className="text-red-500 text-sm">{errors.Title}</p>}
         </div>
 
         <div className="flex items-center gap-4 mb-4">
